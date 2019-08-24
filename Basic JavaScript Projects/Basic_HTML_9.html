@@ -2,15 +2,66 @@
 <html lang="en">
     <head>
 	    <title>Title</title>
-		<meta charset="utf-8">
-		<script src="JS/Basic_JavaScript_9.js"></script>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <script src="JS/Basic_JavaScript_9.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/Basic_CSS_1.css">
     </head>
    <body>
 
+
+    <!-- timer count down-->
     <p>How many seconds would you like to set your alarm for?</p>
     <input id="seconds" value="" />
     <button onclick="countdown()">Click here!</button>
     <p id="timer"></p>
+
+
+
+    <!--challenge-->
+    
+<!--slideshow container-->
+    <div class+"slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="images/thumbs/classic_1.jpg" style="width:100%">
+        <div class="text">Classics</div>
+        </div>
+
+        
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="images/thumbs/classic_2.jpg" style="width:100%">
+              <div class="text">Classics</div>
+              </div>
+
+              
+                  <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="images/thumbs/exotic_1.jpg" style="width:100%">
+                    <div class="text">Exotics</div>
+                    </div>
+
+                   
+                        <div class="mySlides fade">
+                          <div class="numbertext">4 / 4</div>
+                          <img src="images/thumbs/exotic_2.jpg" style="width:100%">
+                          <div class="text">Exotics</div>
+                          </div>
+
+        <!--next and previuos buttons-->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!--The dots/circles-->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+           
 
    
    </body> 
