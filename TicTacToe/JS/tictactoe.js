@@ -9,8 +9,8 @@ function rollForTurn(){
     var ranNum = '';
     var minimum = 1;
     var maximum = 11;
-    var first ='';
-    var txt1 ='';
+    var first ="";
+    var txt1 ="";
     for (var i = 0; i < 2; i++){
         ranNum = Math.floor(Math.random() * (maximum - minimum) + minimum);
         xArray.push(ranNum);
@@ -26,10 +26,10 @@ function rollForTurn(){
             ptwo = 2;
         }
 
-    txt1 ="Player 1 rolled ["+pOne+"]<br>";
-    writeMsg(txt1);
-    txt1 = txt1 + "Player 2 rolled ["+pTwo+"]<br><br>";
-    setTimeout(function() {writeMsg(txt1);}, 1000);
+        txt1 ="Player 1 rolled ["+pOne+"]<br>";
+        writeMsg(txt1);
+        txt1 = txt1 + "Player 2 rolled ["+pTwo+"]<br><br>";
+        setTimeout(function() {writeMsg(txt1);}, 1000);
     }
 
     if (pOne > pTwo){
@@ -39,7 +39,7 @@ function rollForTurn(){
         else if (pOne < pTwo){
             first ="Player 2";
             setTimeout(function(){txt1 = txt1 + "Player 2 wins, please choose a square."}, 2000);
-            settimeout(function(){writeMsg(txt1);}, 2000);
+            setTimeout(function(){writeMsg(txt1);}, 2000);
         }
         return first;
     }
@@ -65,7 +65,7 @@ function btnDisabled(btn){
     btn.style.color ="fff";
     btn.style.border ="2px solid rgb(153, 153, 102)";
     btn.style.backgroundColor = "rgb(214, 214, 194)";
-    btn.disaled = true;
+    btn.disabled = true;
 }
 
 function stopEnabled(btn) {
@@ -148,7 +148,7 @@ function saveSettings() {
         var avatarArray = getAvatars();
         var active = document.getElementById("showPlayer").innerHTML;
         p1Avatar = avatarArray[0];
-        p2Avatar - avatarArray[1];
+        p2Avatar = avatarArray[1];
         if (active == "Player 1") {
             var paintAvatar = p1Avatar;
         } else if (active == "Player 2"){
@@ -202,7 +202,7 @@ function saveSettings() {
         var target = document.getElementById("boardState");
         var info = target.innerHTML;
         info = info.substring(1);
-        info = info.split(" , ");
+        info = info.split(",");
         info.sort();
         for (var i in info){
             squareArray.push(info[i].charAt(0));
@@ -223,7 +223,7 @@ function saveSettings() {
     function check4Tie(){
         var boardState = document.getElementById("boardState").innerHTML;
         boardState = boardState.substring(1);
-        boardState = boardState.split(" , ");
+        boardState = boardState.split(",");
         var check = document.getElementById("gameMsg").innerHTML;
         if(boardState.length >= 9 && check !="That's three in a row, Player 1 wins!" && check != "That's three in a row, Player 2 wins!"){
             var txt1 = "Oh no! Nobody wins, it was a tie!";
@@ -237,7 +237,7 @@ function saveSettings() {
         if  (winDetected == "win") {
             var showme = winDetected;
             var activePlayer = document.getElementById("showPlayer").innerHTML;
-            var txt2 = "That's three in a row, " +activePlayer+" wins!";
+            var txt2 = "That's three in a row, "+activePlayer+" wins!";
             writeMsg(txt2);
             var btn = document.getElementById("btnStart");
             startEnabled(btn);
@@ -302,6 +302,7 @@ function saveSettings() {
       }
       setTimeout(function () {stopGame ();}, 1200);
     }
+}
 
     function squareSound() {
         var sound = document.getElementById("placeAvatar");
@@ -323,7 +324,7 @@ function saveSettings() {
         setTimeout(function () {sound.currentTime = 0;}, 2800); 
     }
 
-    function diceRoll () {
+    function diceRoll() {
         var sound = document.getElementById("diceRoll");
         sound.play();
     }
@@ -716,4 +717,4 @@ function saveSettings() {
                                                 function animateX(selected) {
                                                     selected.style.transform = (selected.style.transform == "translateY(-100%)" || null) ? "translateY(0%)" : "translateY(-100%)";
                                             } 
-    }
+    
