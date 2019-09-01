@@ -1,0 +1,73 @@
+body {
+    background-color: bisque;
+}
+h1 h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18em;
+    color: rgb(14, 7, 117);
+}
+
+#menuBG {
+    width: 400px;
+    height: 470px;
+    margin: 10px auto;
+    color: rgb(63, 10, 252);
+}
+
+#frmMenue {
+    width: 600px;
+    height: 200px;
+    
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float:right;
+    color: #000;
+}
+
+.left {
+    width: 200px;
+    height: 200px;
+    float:right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.right {
+    width: 200px;
+    height: 200px;
+    float:right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+.right_right {
+    width: 200px;
+    height: 200px;
+    float:right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float:left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#cart {
+    top: 0; margin: 0px auto;
+    width: 400px;
+    height: 200px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#btnOrder {
+    margin:10px 0px 0px 100px;
+    width: 100px;
+    height:40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(211, 12, 12);
+}
